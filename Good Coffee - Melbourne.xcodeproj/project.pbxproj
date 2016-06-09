@@ -12,6 +12,12 @@
 		FCA965AF1CFAC98D00DEA223 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA965AD1CFAC98D00DEA223 /* Main.storyboard */; };
 		FCA965B11CFAC98D00DEA223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCA965B01CFAC98D00DEA223 /* Assets.xcassets */; };
 		FCA965B41CFAC98D00DEA223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA965B21CFAC98D00DEA223 /* LaunchScreen.storyboard */; };
+		FCA965BE1CFAD27D00DEA223 /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA965BD1CFAD27D00DEA223 /* Cafe.swift */; };
+		FCA965C01CFAD38400DEA223 /* cafes.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCA965BF1CFAD38400DEA223 /* cafes.plist */; };
+		FCA965C21CFAEB7F00DEA223 /* CoffeeCup.svg in Resources */ = {isa = PBXBuildFile; fileRef = FCA965C11CFAEB7E00DEA223 /* CoffeeCup.svg */; };
+		FCA965C41CFAEF1500DEA223 /* CoffeeCup.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA965C31CFAEF1500DEA223 /* CoffeeCup.png */; };
+		FCA965C61CFAF0EC00DEA223 /* hamburger.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA965C51CFAF0EC00DEA223 /* hamburger.png */; };
+		FCC0DC5D1D04009A00C372E4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC0DC5C1D04009A00C372E4 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		FCA965B01CFAC98D00DEA223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCA965B31CFAC98D00DEA223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCA965B51CFAC98D00DEA223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCA965BD1CFAD27D00DEA223 /* Cafe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
+		FCA965BF1CFAD38400DEA223 /* cafes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cafes.plist; sourceTree = "<group>"; };
+		FCA965C11CFAEB7E00DEA223 /* CoffeeCup.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CoffeeCup.svg; sourceTree = "<group>"; };
+		FCA965C31CFAEF1500DEA223 /* CoffeeCup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CoffeeCup.png; sourceTree = "<group>"; };
+		FCA965C51CFAF0EC00DEA223 /* hamburger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hamburger.png; sourceTree = "<group>"; };
+		FCC0DC5C1D04009A00C372E4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC0DC5D1D04009A00C372E4 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +51,7 @@
 		FCA9659D1CFAC98C00DEA223 = {
 			isa = PBXGroup;
 			children = (
+				FCC0DC5C1D04009A00C372E4 /* MapKit.framework */,
 				FCA965A81CFAC98D00DEA223 /* Good Coffee - Melbourne */,
 				FCA965A71CFAC98C00DEA223 /* Products */,
 			);
@@ -56,10 +70,15 @@
 			children = (
 				FCA965A91CFAC98D00DEA223 /* AppDelegate.swift */,
 				FCA965AB1CFAC98D00DEA223 /* ViewController.swift */,
+				FCA965BD1CFAD27D00DEA223 /* Cafe.swift */,
 				FCA965AD1CFAC98D00DEA223 /* Main.storyboard */,
 				FCA965B01CFAC98D00DEA223 /* Assets.xcassets */,
 				FCA965B21CFAC98D00DEA223 /* LaunchScreen.storyboard */,
 				FCA965B51CFAC98D00DEA223 /* Info.plist */,
+				FCA965BF1CFAD38400DEA223 /* cafes.plist */,
+				FCA965C31CFAEF1500DEA223 /* CoffeeCup.png */,
+				FCA965C51CFAF0EC00DEA223 /* hamburger.png */,
+				FCA965C11CFAEB7E00DEA223 /* CoffeeCup.svg */,
 			);
 			path = "Good Coffee - Melbourne";
 			sourceTree = "<group>";
@@ -97,6 +116,11 @@
 					FCA965A51CFAC98C00DEA223 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = X27G2C5D8W;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -124,7 +148,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCA965B41CFAC98D00DEA223 /* LaunchScreen.storyboard in Resources */,
+				FCA965C61CFAF0EC00DEA223 /* hamburger.png in Resources */,
+				FCA965C01CFAD38400DEA223 /* cafes.plist in Resources */,
 				FCA965B11CFAC98D00DEA223 /* Assets.xcassets in Resources */,
+				FCA965C21CFAEB7F00DEA223 /* CoffeeCup.svg in Resources */,
+				FCA965C41CFAEF1500DEA223 /* CoffeeCup.png in Resources */,
 				FCA965AF1CFAC98D00DEA223 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +166,7 @@
 			files = (
 				FCA965AC1CFAC98D00DEA223 /* ViewController.swift in Sources */,
 				FCA965AA1CFAC98D00DEA223 /* AppDelegate.swift in Sources */,
+				FCA965BE1CFAD27D00DEA223 /* Cafe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +316,7 @@
 				FCA965BA1CFAC98D00DEA223 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
